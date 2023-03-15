@@ -12,7 +12,7 @@ bibliography: references.bib
 ---
 
 
-```{r}
+```{r echo=FALSE, message=FALSE}
 library(tidyverse)
 ```
 
@@ -30,7 +30,7 @@ The R programming language [@R] and the following R packages were used to perfor
 
 # Results
 
-```{r all-population, fig.cap="Horse populations for all provinces in Canada from 1906 - 1972", out.width="100%", out.height="100%"}
+```{r all-population, fig.cap="Horse populations for all provinces in Canada from 1906 - 1972", out.width="100%", out.height="100%", echo=FALSE, message=FALSE, warning=FALSE}
 knitr::include_graphics("../../results/horse_pops_plot.png")
 ```
 
@@ -38,19 +38,19 @@ We can see from Figure \@ref(fig:all-population) that Ontario, Saskatchewan and 
 
 Suppose we were interested in looking in more closely at the province with the highest spread (in terms of standard deviation) of horse populations. We present the standard deviations here:
 
-```{r}
+```{r sd-table, echo=FALSE, warning=FALSE, message=FALSE}
 horses_sd_table <- read_csv("../../results/horses_sd.csv")
 largest_sd <- horses_sd_table$Province[1]
-knitr::kable(horses_sd_table)
+knitr::kable(horses_sd_table, caption = "Table showing the standard deviations of horses population in different provinces")
 ```
 
 Note that we define standard deviation (of a sample) as
 
 $$s = sqrt( sum_{i = 1}^n(x_i - \bar{x}) / (n-1))$$
 
-Additionally, note that in Table 1 we consider the sample standard deviation of the number of horses during the same time span as Figure \@ref(fig:all-population).
+Additionally, note that in Table \@ref(tab:sd-table) we consider the sample standard deviation of the number of horses during the same time span as Figure \@ref(fig:all-population).s
 
-```{r largest-sd-population, fig.cap="Horse populations for the province with the largest standard deviation", out.width="100%", out.height="100%"}
+```{r largest-sd-population, fig.cap="Horse populations for the province with the largest standard deviation", out.width="60%", out.height="60%", echo=FALSE}
 knitr::include_graphics("../../results/horse_pop_plot_largest_sd.png")
 ```
 
