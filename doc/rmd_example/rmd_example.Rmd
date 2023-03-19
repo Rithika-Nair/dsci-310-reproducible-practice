@@ -30,7 +30,7 @@ The R programming language [@R] and the following R packages were used to perfor
 
 # Results
 
-```{r all-population, fig.cap="Horse populations for all provinces in Canada from 1906 - 1972", out.width="100%", out.height="100%", echo=FALSE, message=FALSE, warning=FALSE}
+```{r all-population, fig.cap="Horse populations for all provinces in Canada from 1906 - 1972", out.width="90%", out.height="90%", fig.align='center', echo=FALSE, message=FALSE, warning=FALSE}
 knitr::include_graphics("../../results/horse_pops_plot.png")
 ```
 
@@ -50,10 +50,10 @@ $$s = sqrt( sum_{i = 1}^n(x_i - \bar{x}) / (n-1))$$
 
 Additionally, note that in Table \@ref(tab:sd-table) we consider the sample standard deviation of the number of horses during the same time span as Figure \@ref(fig:all-population).s
 
-```{r largest-sd-population, fig.cap="Horse populations for the province with the largest standard deviation", out.width="60%", out.height="60%", echo=FALSE}
+```{r largest-sd-population, fig.cap="Horse populations for the province with the largest standard deviation", out.width="60%", out.height="60%", fig.align='center', echo=FALSE}
 knitr::include_graphics("../../results/horse_pop_plot_largest_sd.png")
 ```
 
-In Figure \@ref(fig:largest-sd-population) we zoom in and look at the province of ?, which had the largest spread of values in terms of standard deviation.
+In Figure \@ref(fig:largest-sd-population) we zoom in and look at the province of `r largest_sd`, which had the largest spread of values in terms of standard deviation.
 
 # References
